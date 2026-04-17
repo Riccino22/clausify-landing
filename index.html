@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Clausify | AI Contract Intelligence</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#690005",
+            "secondary-container": "#304671",
+            "on-surface-variant": "#c2c6d6",
+            "background": "#0b1326",
+            "surface-bright": "#31394d",
+            "inverse-surface": "#dae2fd",
+            "on-primary": "#002e6a",
+            "on-primary-container": "#00285d",
+            "surface-container-highest": "#2d3449",
+            "primary-fixed": "#d8e2ff",
+            "on-secondary": "#182f59",
+            "on-surface": "#dae2fd",
+            "surface-container-low": "#131b2e",
+            "tertiary": "#d0bcff",
+            "surface-tint": "#adc6ff",
+            "surface-variant": "#2d3449",
+            "primary-fixed-dim": "#adc6ff",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#4d8eff",
+            "on-tertiary-container": "#340080",
+            "secondary-fixed-dim": "#b1c6f9",
+            "surface-container-high": "#222a3d",
+            "on-tertiary-fixed-variant": "#5516be",
+            "secondary": "#b1c6f9",
+            "on-tertiary": "#3c0091",
+            "inverse-primary": "#005ac2",
+            "on-secondary-fixed": "#001a42",
+            "tertiary-fixed": "#e9ddff",
+            "error-container": "#93000a",
+            "on-secondary-fixed-variant": "#304671",
+            "outline-variant": "#424754",
+            "error": "#ffb4ab",
+            "surface-dim": "#0b1326",
+            "surface-container": "#171f33",
+            "surface": "#0b1326",
+            "surface-container-lowest": "#060e20",
+            "tertiary-container": "#a078ff",
+            "secondary-fixed": "#d8e2ff",
+            "on-primary-fixed-variant": "#004395",
+            "on-secondary-container": "#9fb5e7",
+            "inverse-on-surface": "#283044",
+            "on-primary-fixed": "#001a42",
+            "outline": "#8c909f",
+            "on-background": "#dae2fd",
+            "tertiary-fixed-dim": "#d0bcff",
+            "on-tertiary-fixed": "#23005c",
+            "primary": "#adc6ff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(34, 42, 61, 0.6);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+      <div class="text-2xl font-bold tracking-tighter text-[#adc6ff] font-headline">Clausify</div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-[#adc6ff] font-semibold border-b-2 border-[#adc6ff] pb-1 font-headline tracking-tight" href="#">Product</a>
+        <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#how-it-works">How it works</a>
+        <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#pricing">Pricing</a>
+        <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#waitlist">Early access</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="text-slate-400 font-medium hover:text-white transition-colors px-4 py-2">Log In</button>
+        <button class="bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-semibold px-6 py-2.5 rounded-xl hover:scale-95 active:scale-90 transition-transform">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+
+    <!-- Hero -->
+    <section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-tertiary/10 rounded-full blur-[100px]"></div>
+      </div>
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20">
+            <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            <span class="text-xs font-semibold tracking-wider uppercase text-tertiary">Beta Access Now Open</span>
+          </div>
+          <h1 class="text-6xl md:text-8xl font-extrabold font-headline tracking-tighter leading-[0.95] text-on-surface">
+            Sign contracts with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">confidence</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+            Clausify scans your contracts and flags risky or abusive clauses before you sign. Powered by AI.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-bold text-lg px-10 py-5 rounded-xl hover:scale-95 active:scale-90 transition-transform shadow-[0px_20px_50px_rgba(173,198,255,0.2)]">
+              Analyze my contract
+            </button>
+            <button onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})" class="group flex items-center gap-2 text-on-surface font-semibold px-10 py-5 rounded-xl border border-outline-variant/30 hover:bg-surface-container-high transition-all">
+              See how it works <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="glass-card rounded-[2rem] p-6 border border-outline-variant/10 shadow-2xl">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
+                <div class="flex gap-2">
+                  <div class="w-3 h-3 rounded-full bg-error/40"></div>
+                  <div class="w-3 h-3 rounded-full bg-tertiary/40"></div>
+                  <div class="w-3 h-3 rounded-full bg-primary/40"></div>
+                </div>
+                <span class="text-xs text-on-surface-variant font-mono">analysis_report.v2</span>
+              </div>
+              <div class="space-y-6 py-4">
+                <div class="p-4 rounded-xl bg-surface-container-low border-l-4 border-error">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-error text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+                    <span class="text-xs font-bold text-error uppercase tracking-widest">High Risk Flag</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant leading-relaxed italic">"...exclusive rights to all derivative works in perpetuity without royalty..."</p>
+                  <p class="mt-2 text-xs font-semibold text-primary">Recommendation: Re-negotiate ownership terms.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-low border-l-4 border-tertiary">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">info</span>
+                    <span class="text-xs font-bold text-tertiary uppercase tracking-widest">Complex Language</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">The termination clause is nested in Section 14.2(b). It requires 180 days notice.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-low border-l-4 border-primary/50">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    <span class="text-xs font-bold text-primary uppercase tracking-widest">Clause OK</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">Payment terms are standard. Net-30 with no hidden penalties.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof strip -->
+    <section class="py-8 bg-surface-container-low border-y border-outline-variant/10">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <p class="text-sm text-slate-500 font-medium uppercase tracking-widest">Trusted by professionals in</p>
+          <div class="flex flex-wrap items-center justify-center gap-8 opacity-40">
+            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Freelance</span>
+            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Real Estate</span>
+            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">SaaS</span>
+            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Consulting</span>
+            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Startups</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-32 bg-surface-container-low relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="mb-20 space-y-4">
+          <h2 class="text-4xl md:text-6xl font-extrabold font-headline tracking-tighter">Stop signing <span class="text-outline">blindly</span>.</h2>
+          <p class="text-xl text-on-surface-variant max-w-2xl">Traditional legal review is slow, expensive, and often skipped. We built Clausify to solve three critical problems.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="group bg-surface-container-high p-10 rounded-[2rem] hover:translate-y-[-8px] transition-all duration-300">
+            <div class="w-14 h-14 bg-error/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-error text-3xl">payments</span>
+            </div>
+            <h3 class="text-2xl font-bold font-headline mb-4">Hidden clauses that cost you money</h3>
+            <p class="text-on-surface-variant leading-relaxed">Auto-renewals, exit fees, and hidden penalties buried in fine print can drain your budget without you ever knowing.</p>
+          </div>
+          <div class="group bg-surface-container-high p-10 rounded-[2rem] hover:translate-y-[-8px] transition-all duration-300">
+            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+            </div>
+            <h3 class="text-2xl font-bold font-headline mb-4">Legal jargon you don't understand</h3>
+            <p class="text-on-surface-variant leading-relaxed">Dense "legalese" is designed to be confusing. Our AI translates complex terms into plain English you can actually act on.</p>
+          </div>
+          <div class="group bg-surface-container-high p-10 rounded-[2rem] hover:translate-y-[-8px] transition-all duration-300">
+            <div class="w-14 h-14 bg-tertiary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-tertiary text-3xl">history</span>
+            </div>
+            <h3 class="text-2xl font-bold font-headline mb-4">No time to read 20-page contracts</h3>
+            <p class="text-on-surface-variant leading-relaxed">Reviewing dozens of pages manually takes hours. Get a comprehensive risk summary in seconds, not days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-32 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-6xl font-extrabold font-headline tracking-tighter mb-6">How it works</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-tertiary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative">
+          <div class="relative">
+            <div class="text-[12rem] font-extrabold font-headline text-surface-container-highest absolute -top-24 -left-8 opacity-20 select-none">1</div>
+            <div class="relative z-10 space-y-6">
+              <div class="w-16 h-16 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+              </div>
+              <h4 class="text-2xl font-bold font-headline">Upload your contract</h4>
+              <p class="text-on-surface-variant leading-relaxed">Simply drag and drop your PDF or paste the raw text directly into our secure, encrypted analyzer.</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="text-[12rem] font-extrabold font-headline text-surface-container-highest absolute -top-24 -left-8 opacity-20 select-none">2</div>
+            <div class="relative z-10 space-y-6">
+              <div class="w-16 h-16 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-tertiary text-3xl">psychology</span>
+              </div>
+              <h4 class="text-2xl font-bold font-headline">AI analyzes every clause</h4>
+              <p class="text-on-surface-variant leading-relaxed">Our legal-trained Large Language Model scans every sentence to identify patterns of risk, liability, and obligation.</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="text-[12rem] font-extrabold font-headline text-surface-container-highest absolute -top-24 -left-8 opacity-20 select-none">3</div>
+            <div class="relative z-10 space-y-6">
+              <div class="w-16 h-16 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-on-surface text-3xl">assignment_turned_in</span>
+              </div>
+              <h4 class="text-2xl font-bold font-headline">Get a plain-language report</h4>
+              <p class="text-on-surface-variant leading-relaxed">Receive an executive summary with risk flags and plain-language explanations of what you're actually agreeing to.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-surface-container-low relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-tertiary/5 rounded-full blur-[100px]"></div>
+      <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="text-center mb-20 space-y-4">
+          <h2 class="text-4xl md:text-6xl font-extrabold font-headline tracking-tighter">Simple pricing</h2>
+          <p class="text-xl text-on-surface-variant">Start free during beta. No credit card needed.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          <!-- Free -->
+          <div class="bg-surface-container-high p-10 rounded-[2rem] border border-outline-variant/10 flex flex-col gap-6">
+            <div>
+              <p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-2">Starter</p>
+              <p class="text-5xl font-extrabold font-headline">$0</p>
+              <p class="text-on-surface-variant text-sm mt-1">Free during beta</p>
+            </div>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                3 contract analyses / month
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Risk summary report
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-600">
+                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
+                Plain-language explanations
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-600">
+                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
+                Priority support
+              </li>
+            </ul>
+            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full border border-outline-variant/30 text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container transition-all">
+              Get started free
+            </button>
+          </div>
+
+          <!-- Pro — highlighted -->
+          <div class="relative bg-gradient-to-b from-surface-container-high to-surface-container p-10 rounded-[2rem] border border-primary/30 flex flex-col gap-6 shadow-[0_0_60px_rgba(173,198,255,0.08)]">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span class="bg-gradient-to-r from-primary to-tertiary-container text-on-primary-fixed text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Most popular</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-primary uppercase tracking-widest mb-2">Pro</p>
+              <p class="text-5xl font-extrabold font-headline">$12<span class="text-xl font-medium text-on-surface-variant">/mo</span></p>
+              <p class="text-on-surface-variant text-sm mt-1">After beta</p>
+            </div>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Unlimited analyses
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Plain-language explanations
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Clause-by-clause breakdown
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-600">
+                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
+                Priority support
+              </li>
+            </ul>
+            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-bold py-4 rounded-xl hover:scale-95 active:scale-90 transition-transform">
+              Join waitlist
+            </button>
+          </div>
+
+          <!-- Business -->
+          <div class="bg-surface-container-high p-10 rounded-[2rem] border border-outline-variant/10 flex flex-col gap-6">
+            <div>
+              <p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-2">Business</p>
+              <p class="text-5xl font-extrabold font-headline">$39<span class="text-xl font-medium text-on-surface-variant">/mo</span></p>
+              <p class="text-on-surface-variant text-sm mt-1">After beta</p>
+            </div>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Everything in Pro
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Team seats (up to 10)
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                API access
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                Priority support
+              </li>
+            </ul>
+            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full border border-outline-variant/30 text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container transition-all">
+              Contact us
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Validation Form / Waitlist -->
+    <section id="waitlist" class="py-32 px-8">
+      <div class="max-w-3xl mx-auto glass-card rounded-[3rem] p-12 md:p-16 border border-outline-variant/20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-tertiary/5"></div>
+        <div class="relative z-10 space-y-10">
+
+          <div class="text-center space-y-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter">Get early access</h2>
+            <p class="text-lg text-on-surface-variant">Help us build the right product. Answer 3 quick questions and we'll notify you first.</p>
+          </div>
+
+          <iframe
+            data-tally-src="https://tally.so/embed/vGxAED?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="400"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Clausify waitlist"
+          ></iframe>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onerror=v,s.onload=v,d.body.appendChild(s);}</script>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b1326] w-full py-12 border-t border-[#222a3d]/30">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <div class="text-lg font-bold text-[#adc6ff] font-headline">Clausify</div>
+        <p class="font-['Inter'] text-sm tracking-wide text-slate-500">© 2024 Clausify AI. Legal Precision Guaranteed.</p>
+      </div>
+      <div class="flex gap-8">
+        <a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-[#a078ff] transition-colors" href="#">Privacy Policy</a>
+        <a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-[#a078ff] transition-colors" href="#">Terms of Service</a>
+        <a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-[#a078ff] transition-colors" href="#">Security</a>
+        <a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-[#a078ff] transition-colors" href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
