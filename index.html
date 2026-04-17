@@ -97,12 +97,10 @@
       <div class="hidden md:flex items-center gap-8">
         <a class="text-[#adc6ff] font-semibold border-b-2 border-[#adc6ff] pb-1 font-headline tracking-tight" href="#">Product</a>
         <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#how-it-works">How it works</a>
-        <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#pricing">Pricing</a>
-        <a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#waitlist">Early access</a>
+<a class="text-slate-400 font-medium hover:text-white transition-colors font-headline tracking-tight" href="#waitlist">Early access</a>
       </div>
       <div class="flex items-center gap-4">
-        <button class="text-slate-400 font-medium hover:text-white transition-colors px-4 py-2">Log In</button>
-        <button class="bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-semibold px-6 py-2.5 rounded-xl hover:scale-95 active:scale-90 transition-transform">Get Started</button>
+        <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-semibold px-6 py-2.5 rounded-xl hover:scale-95 active:scale-90 transition-transform">Get Started</button>
       </div>
     </div>
   </nav>
@@ -174,22 +172,6 @@
             </div>
           </div>
           <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social proof strip -->
-    <section class="py-8 bg-surface-container-low border-y border-outline-variant/10">
-      <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p class="text-sm text-slate-500 font-medium uppercase tracking-widest">Trusted by professionals in</p>
-          <div class="flex flex-wrap items-center justify-center gap-8 opacity-40">
-            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Freelance</span>
-            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Real Estate</span>
-            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">SaaS</span>
-            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Consulting</span>
-            <span class="text-on-surface font-bold font-headline text-sm tracking-wide">Startups</span>
-          </div>
         </div>
       </div>
     </section>
@@ -269,113 +251,6 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-32 bg-surface-container-low relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-tertiary/5 rounded-full blur-[100px]"></div>
-      <div class="max-w-7xl mx-auto px-8 relative z-10">
-        <div class="text-center mb-20 space-y-4">
-          <h2 class="text-4xl md:text-6xl font-extrabold font-headline tracking-tighter">Simple pricing</h2>
-          <p class="text-xl text-on-surface-variant">Start free during beta. No credit card needed.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-
-          <!-- Free -->
-          <div class="bg-surface-container-high p-10 rounded-[2rem] border border-outline-variant/10 flex flex-col gap-6">
-            <div>
-              <p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-2">Starter</p>
-              <p class="text-5xl font-extrabold font-headline">$0</p>
-              <p class="text-on-surface-variant text-sm mt-1">Free during beta</p>
-            </div>
-            <ul class="space-y-3 flex-grow">
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                3 contract analyses / month
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Risk summary report
-              </li>
-              <li class="flex items-center gap-3 text-sm text-slate-600">
-                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
-                Plain-language explanations
-              </li>
-              <li class="flex items-center gap-3 text-sm text-slate-600">
-                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
-                Priority support
-              </li>
-            </ul>
-            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full border border-outline-variant/30 text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container transition-all">
-              Get started free
-            </button>
-          </div>
-
-          <!-- Pro — highlighted -->
-          <div class="relative bg-gradient-to-b from-surface-container-high to-surface-container p-10 rounded-[2rem] border border-primary/30 flex flex-col gap-6 shadow-[0_0_60px_rgba(173,198,255,0.08)]">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <span class="bg-gradient-to-r from-primary to-tertiary-container text-on-primary-fixed text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Most popular</span>
-            </div>
-            <div>
-              <p class="text-sm font-semibold text-primary uppercase tracking-widest mb-2">Pro</p>
-              <p class="text-5xl font-extrabold font-headline">$12<span class="text-xl font-medium text-on-surface-variant">/mo</span></p>
-              <p class="text-on-surface-variant text-sm mt-1">After beta</p>
-            </div>
-            <ul class="space-y-3 flex-grow">
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Unlimited analyses
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Plain-language explanations
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Clause-by-clause breakdown
-              </li>
-              <li class="flex items-center gap-3 text-sm text-slate-600">
-                <span class="material-symbols-outlined text-slate-600 text-base">remove</span>
-                Priority support
-              </li>
-            </ul>
-            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full bg-gradient-to-br from-primary to-tertiary-container text-on-primary-fixed font-bold py-4 rounded-xl hover:scale-95 active:scale-90 transition-transform">
-              Join waitlist
-            </button>
-          </div>
-
-          <!-- Business -->
-          <div class="bg-surface-container-high p-10 rounded-[2rem] border border-outline-variant/10 flex flex-col gap-6">
-            <div>
-              <p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-2">Business</p>
-              <p class="text-5xl font-extrabold font-headline">$39<span class="text-xl font-medium text-on-surface-variant">/mo</span></p>
-              <p class="text-on-surface-variant text-sm mt-1">After beta</p>
-            </div>
-            <ul class="space-y-3 flex-grow">
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Everything in Pro
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Team seats (up to 10)
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                API access
-              </li>
-              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1;">check_circle</span>
-                Priority support
-              </li>
-            </ul>
-            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full border border-outline-variant/30 text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container transition-all">
-              Contact us
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <!-- Validation Form / Waitlist -->
     <section id="waitlist" class="py-32 px-8">
       <div class="max-w-3xl mx-auto glass-card rounded-[3rem] p-12 md:p-16 border border-outline-variant/20 relative overflow-hidden">
@@ -410,7 +285,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
       <div class="flex flex-col items-center md:items-start gap-2">
         <div class="text-lg font-bold text-[#adc6ff] font-headline">Clausify</div>
-        <p class="font-['Inter'] text-sm tracking-wide text-slate-500">© 2024 Clausify AI. Legal Precision Guaranteed.</p>
+        <p class="font-['Inter'] text-sm tracking-wide text-slate-500">© 2026 Clausify AI. Legal Precision Guaranteed.</p>
       </div>
       <div class="flex gap-8">
         <a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-[#a078ff] transition-colors" href="#">Privacy Policy</a>
